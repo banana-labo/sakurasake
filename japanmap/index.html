@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from etc.imo-tikuwa.com/japanmap/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 20 Sep 2022 03:56:24 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="UTF-8" />
+    <title>japanmapを使用した日本地図選択</title>
+    <link rel="stylesheet" href="css/japanmap.css">
+    <script src="js/jquery-1.12.1.min.js"></script>
+<!-- 
+japan mapを使用して日本地図を選択する（地域選択 → 都道府県選択の2段階式）
+１．インラインフレームでmap.htmlを読み込む
+２．日本地図のサイズはmap.htmlの読み込み時のgetパラメータcanvasWidthで指定する（未指定の場合は初期値800px）
+３．日本地図が表示される（　･`ー･´三　･`ー･´）
+-->
+    <script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-2135402242685171",
+          enable_page_level_ads: true
+     });
+</script>
+</head>
+<body>
+
+
+<iframe id="map" src="mape31c.html?canvasWidth=800" frameborder="0" scrolling="no"></iframe>
+<script>
+	$(function(){
+
+		var $mapObj = $("#map");
+		$mapObj.on("load", function(){
+			// iframe読み込み後、iframe内のcanvasのサイズを取得し、iframeのサイズを設定する
+			var $iframeCanvas = $('iframe:first').contents().find("#japan-map-container > canvas");
+			$mapObj.attr({
+				width : $iframeCanvas.attr("width"),
+				height : $iframeCanvas.attr("height")
+			});
+		});
+	});
+</script>
+
+
+</body>
+
+<!-- Mirrored from etc.imo-tikuwa.com/japanmap/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 20 Sep 2022 03:56:30 GMT -->
+</html>
+
