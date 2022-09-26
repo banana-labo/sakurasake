@@ -223,7 +223,7 @@
 </svg></div>
 
 <style>
-  .geolonia-svg-map
+ .geolonia-svg-map
 {
   width: 100%;
 }
@@ -233,11 +233,6 @@
   fill: #f7f7f7;
   stroke: #666666;
   cursor: pointer;
-}
-  
-  .geolonia-svg-map .prefecture:hover
-{
-  fill: #000000;
 }
 
 .geolonia-svg-map .boundary-line
@@ -250,7 +245,7 @@
   prefs.forEach( ( pref ) => {
     // マウスオーバーで色を変える
     pref.addEventListener( 'mouseover', ( event ) => {
-      event.currentTarget.style.fill = "#ff0000";} );
+      event.currentTarget.style.fill = "#da5165";} );
 
     // マウスが離れたら色をもとに戻す
     pref.addEventListener( 'mouseleave', ( event ) => {
@@ -259,7 +254,6 @@
     // マウスクリック時のイベント
     pref.addEventListener( 'click', ( event ) => {
       location.href = `https://sakurasaketen.webflow.io/brewery?prefecture=${event.currentTarget.dataset.code}`;
-      alert('What?');
     } );
   } );
 </script>
